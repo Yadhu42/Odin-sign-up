@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side{
+    width: 40%;
+    height: 100%;
+}
+
+.content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block2{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.entry1,.entry2,.entry3{
+    display: flex;
+    gap: 40px;
+}
+
+.entry{
+    display: flex;
+    flex-direction: column;
+}
