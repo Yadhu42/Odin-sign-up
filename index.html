@@ -3,14 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:opsz,wght@14..32,100..900&family=McLaren&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap" 
+        rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
         <title>Sign Up</title>
     </head>
     <body>
         <div class="container">
             <div class="side">
-                <h1>TITLE</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam minima fugit alias voluptatem iure nam quidem eaque asperiores, id ullam voluptatibus aspernatur repellendus dolores cum excepturi quas debitis provident ratione.</p>
+                <div class="logo">
+                    <img src="./images/mountain-solid-svgrepo-white-com(1).svg" width="50px"/>
+                </div>
+
+                <div class="hero">
+                    <p>Great things happen when men and mountains meet.</p>
+                </div>
             </div>
             <div class="content">
                 <div class="block1">
@@ -20,39 +29,61 @@
                     <div class="entry1">
                         <div class="entry">
                             <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name" required>
+                            <div class="validation">
+                                <input type="text" id="first-name" name="first-name" required>
+                                <span></span>
+                            </div>
                         </div>
 
                         <div class="entry">
                             <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name" required>
+                            <div class="validation">
+                                <input type="text" id="last-name" name="last-name" required>
+                                <span></span>
+                            </div>
                         </div>
+
                     </div>
                     <div class="entry2">
                         <div class="entry">
                             <label for="email">Email</label>
-                            <input type="text" id="email" name="email" required>
+                            <div class="validation">
+                                <input type="email" id="email" name="email" required>
+                                <span></span>
+                            </div>
                         </div>
                         
                         <div class="entry">
                             <label for="phone">Phone Number</label>
-                            <input type="number" id="phone" name="phone" required>
+                            <div class="validation">
+                                <input inputmode="numeric" pattern="^[0-9\+]+$" minlength="13" id="phone" name="phone" required>
+                                <span></span>
+                            </div>
                         </div>
+                        
                     </div>
                     <div class="entry3">
                         <div class="entry">
                             <label for="pass1">Password</label>
-                            <input type="password" id="pass1" name="pass1" required>
+                            <div class="validation">
+                            <input type="password" id="pass1" name="pass1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^{}])[a-zA-z\d@$!%*?&#]{8,}$" required>
+                            <span class="tooltip" data-tooltip="Min 8 characters, including uppercase, lowercase, numerical value and special characters [@$!%*?&#^{}]">?</span>
+                            </div>
                         </div>
 
                         <div class="entry">
                             <label for="pass2">Confirm Password</label>
-                            <input type="password" id="pass2" name="pass2" required>
+                            <div class="validation">   
+                                <input type="password" id="pass2" name="pass2" minlength="8" title="Please enter minimum 8 characters" required>
+                                <span></span>
+                            </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="block3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam esse officiis repellendus porro hic corporis libero dignissimos. Corporis sequi, sed sint iure ipsum sit dolorum consequuntur enim accusamus minima?</p>
+                    <button type="submit">Create Account</button>
+                    <p class="existingUser">Already have an account? <span>Log in</span></p>
                 </div>
             </div>
         </div>

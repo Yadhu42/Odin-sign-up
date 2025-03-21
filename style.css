@@ -1,6 +1,16 @@
+:root{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
 body{
+    margin: 0;
+    padding: 0;
     display: flex;
     height: 100vh;
+    background-color: #F6F4F0;
 }
 
 .container{
@@ -12,9 +22,62 @@ body{
 .side{
     width: 40%;
     height: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    background: linear-gradient(#2C3333,#0E8388,#CBE4DE);
+    background-size: 180% 180%;
+    animation: gradience 7s ease infinite;
+}
+
+@keyframes gradience {
+    0%{
+        background-position: 50% 0%;
+    }
+
+    50%{
+        background-position: 50% 100%;
+    }
+
+    100%{
+        background-position: 50% 0%;
+    }
+}
+
+.logo{
+    width:100%;
+    display: flex;
+    background-color: #2c33336c;
+    justify-content: right;
+}
+
+.logo img{
+    width: 100px;
+    padding: 0 10px;
+}
+
+.hero{
+    font-weight: 500;
+    font-style: normal;
+    font-size: 75px;
+    color: azure;
+    letter-spacing: -0.25rem;
+    line-height: 100%;
+    
+    padding: 5px ;
+}
+
+.hero p{
+    margin: 0;
+    padding: 0;
 }
 
 .content{
+    margin: 8px;
+    padding: 3px;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -29,12 +92,101 @@ body{
     justify-content: center;
 }
 
+.entry3{
+    margin-top: 35px;
+}
+
 .entry1,.entry2,.entry3{
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    justify-content: space-between;
 }
 
 .entry{
     display: flex;
     flex-direction: column;
+}
+
+.validation{
+    display: flex;
+    gap: 8px;
+}
+
+input{
+    height: 22px;
+}
+
+input + span{
+    position: relative;
+}
+
+input + span::before{
+    position: absolute;
+}
+
+input:invalid{
+    border: 3px solid ;
+    border-color: rgb(174, 1, 1);
+}
+
+input:valid{
+    border-color: green;
+}
+
+input[type=text]:valid + span::before, input[type=email]:valid + span::before,input[inputmode=numeric]:valid + span::before,
+input[id=pass2]:valid + span::before {
+    content:"✓";
+    color: green;
+}
+
+input{
+    border-radius: 5px;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+}
+
+.tooltip{
+    background-color: #2c33337c;
+    color: white;
+    padding: 5px 12px;
+    cursor:help;
+    border-radius: 100%;
+}
+
+.tooltip::before,.tooltip::after{
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+}
+
+.tooltip::before{
+    content: "";
+    border-width: 17px 14px 0 14px;
+    border-style: solid;
+    border-color: #2c33337c transparent transparent transparent;
+    transform: translate(-14px,-22.5px);
+}
+
+.tooltip::after{
+    content:attr(data-tooltip);
+    border-width: solid 10px #2c33337c;
+    background-color: #2c33337c;
+    font-size: 14px;
+    width: 225px;
+    border-radius: 5px;
+    transform: translate(-112.5px,-85px);
+    padding: 6px;
+}
+
+.tooltip::before:hover,.tooltip::after:hover{
+    opacity: 1;
 }
