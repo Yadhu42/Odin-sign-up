@@ -23,12 +23,14 @@
             </div>
             <div class="content">
                 <div class="block1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat veniam esse officiis repellendus porro hic corporis libero dignissimos. Corporis sequi, sed sint iure ipsum sit dolorum consequuntur enim accusamus minima?</p>
+                    <div class="headingTxt"><p id="now">The best time for new beginnings is <span>now </span></p>
+                        <p id="join">Sign up to recieve our official newsletter</p>
+                    </div>
                 </div>
                 <div class="block2">
                     <div class="entry1">
                         <div class="entry">
-                            <label for="first-name">First Name</label>
+                            <label for="first-name">FIRST NAME</label>
                             <div class="validation">
                                 <input type="text" id="first-name" name="first-name" required>
                                 <span></span>
@@ -36,7 +38,7 @@
                         </div>
 
                         <div class="entry">
-                            <label for="last-name">Last Name</label>
+                            <label for="last-name">LAST NAME</label>
                             <div class="validation">
                                 <input type="text" id="last-name" name="last-name" required>
                                 <span></span>
@@ -46,7 +48,7 @@
                     </div>
                     <div class="entry2">
                         <div class="entry">
-                            <label for="email">Email</label>
+                            <label for="email">EMAIL</label>
                             <div class="validation">
                                 <input type="email" id="email" name="email" required>
                                 <span></span>
@@ -54,7 +56,7 @@
                         </div>
                         
                         <div class="entry">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone">PHONE NUMBER</label>
                             <div class="validation">
                                 <input inputmode="numeric" pattern="^[0-9\+]+$" minlength="13" id="phone" name="phone" required>
                                 <span></span>
@@ -64,17 +66,17 @@
                     </div>
                     <div class="entry3">
                         <div class="entry">
-                            <label for="pass1">Password</label>
+                            <label for="pass1">PASSWORD</label>
                             <div class="validation">
-                            <input type="password" id="pass1" name="pass1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^{}])[a-zA-z\d@$!%*?&#]{8,}$" required>
-                            <span class="tooltip" data-tooltip="Min 8 characters, including uppercase, lowercase, numerical value and special characters [@$!%*?&#^{}]">?</span>
+                            <input type="password" id="pass1" name="pass1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&~#])[A-Za-z\d@$!%*?&~#]{8,}$" required>
+                            <span class="tooltip" data-tooltip="Min 8 characters including uppercase, lowercase, numbers and symbols (@$!%*?&#^{})">?</span>
                             </div>
                         </div>
 
                         <div class="entry">
-                            <label for="pass2">Confirm Password</label>
+                            <label for="pass2">CONFIRM PASSWORD</label>
                             <div class="validation">   
-                                <input type="password" id="pass2" name="pass2" minlength="8" title="Please enter minimum 8 characters" required>
+                                <input type="password" id="pass2" name="pass2" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&~#])[A-za-z\d@$!%*?&~#]{8,}$" required>
                                 <span></span>
                             </div>
                         </div>
@@ -82,8 +84,8 @@
                     </div>
                 </div>
                 <div class="block3">
-                    <button type="submit">Create Account</button>
-                    <p class="existingUser">Already have an account? <span>Log in</span></p>
+                    <div class="createbtn"><button type="submit">Create Account</button></div>
+                    <div class="loginTxt"><p class="existingUser">Already have an account? <span><a href="/">Log in</a></span></p></div>
                 </div>
             </div>
         </div>
